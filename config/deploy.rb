@@ -1,39 +1,28 @@
+SSHKit.config.command_map[:rake] = 'bundle exec rake'
+
 set :application, 'onlineEVM'
-set :repo_url, 'git@github.com:sparselabs/poll.git'
+set :repo_url, 'https://github.com/sparselabs/poll.git'
+# set :repo_url, 'git@github.com:sparselabs/poll.git'
+# set :repo_url, 'https://sparse_deployer:deploy123_hello@bitbucket.org/pankajbatra/jooleh_rails.git'
+
 # set :ssh_options, { :forward_agent => true }
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/ubuntu/apps/onlineEVM'
-
-# Default value for :format is :airbrussh.
-# set :format, :airbrussh
-
-# You can configure the Airbrussh format using :format_options.
-# These are the defaults.
-# set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
-
-# Default value for :pty is false
-# set :pty, true
+set :deploy_to, '/home/pankajbatra/apps/onlineEVM'
+set :scm, :git
+set :format, :pretty
+set :log_level, :debug
+set :pty, true
 
 set :log_level, :debug
 
-# Default value for :linked_files is []
-# append :linked_files, "config/database.yml"
-append :linked_files, '.env'
-# append :linked_files, "config/database.yml"
+set :linked_files, %w{.env}
 
-# Default value for linked_dirs is []
-append :linked_dirs, 'log'
-append :linked_dirs, 'tmp/pids'
-append :linked_dirs, 'tmp/cache'
-append :linked_dirs, 'tmp/sockets'
-append :linked_dirs, 'public/system'
-append :linked_dirs, 'vendor/bundle'
-append :linked_dirs, '.bundle'
-append :linked_dirs, 'public/uploads'
+set :linked_dirs, %w{certs data extra schema log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -122,4 +111,8 @@ namespace :deploy do
 
   after :finishing, 'deploy:cleanup'
 end
+
+
+# set :nginx_use_ssl, true
+
 

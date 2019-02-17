@@ -57,13 +57,25 @@ end
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
-gem 'puma', '~> 2.9'
+# gem 'puma', '~> 2.9'
+gem 'puma', '3.4'
 gem 'net-ssh', '~> 2.8'
-gem 'capistrano', '~> 3.2.1'
-gem 'capistrano-rails', '~> 1.1.1'
-gem 'capistrano-file-permissions', '~> 0.1.0'
-gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.2'
-gem 'capistrano-rake', '~> 0.1.0'
-gem 'capistrano-bundler', '~> 1.1', '>= 1.1.2'
-gem 'capistrano3-puma', '~> 0.4.2'
+# gem 'capistrano', '~> 3.4.0'
+# gem 'capistrano-rails', '~> 1.1.1'
+# gem 'capistrano-file-permissions', '~> 0.1.0'
+# gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.2'
+# gem 'capistrano-rake', '~> 0.1.0'
+# gem 'capistrano-bundler', '~> 1.1', '>= 1.1.2'
+gem 'capistrano3-puma', github: 'sparselabs/capistrano-puma', group: :development
 gem 'puma_worker_killer', '~> 0.0.3'
+
+gem 'capistrano', '~> 3.6.0'
+gem 'capistrano-rails', '~> 1.1.2'
+gem 'capistrano-file-permissions', '~> 0.1.0'
+gem 'capistrano-rbenv', '~> 2.0.2'
+# gem 'capistrano-secrets-yml', '~> 1.0.0'
+gem 'capistrano-rake'
+# gem 'capistrano-delayed-job', '~> 1.1'
+# gem 'capistrano3-monit', '~> 0.4.0'
+gem 'capistrano-bundler', '~> 1.2.0'
+gem 'sshkit-sudo'
