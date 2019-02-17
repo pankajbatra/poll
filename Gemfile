@@ -55,7 +55,8 @@ group :development do
   gem "binding_of_caller"
 end
 
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails'
+# , :groups => [:development, :test]
 
 # gem 'puma', '~> 2.9'
 gem 'puma', '3.4'
