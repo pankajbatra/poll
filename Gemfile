@@ -42,7 +42,8 @@ gem 'mysql2' , '~> 0.3.13'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "autoprefixer-rails"
+# gem "autoprefixer-rails"
+gem 'autoprefixer-rails', '~> 4.0'
 gem 'rails-assets-angular', "1.3.0.rc.4"
 gem 'pusher'
 
