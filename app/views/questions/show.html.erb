@@ -6,7 +6,7 @@
     <%= hidden_field(:vote, :question_id, value: @question.secret) %>
 
     <fieldset>
-      <% @question.options.order('random()').each do |option| %>
+      <% @question.options.order('RAND()').each do |option| %>
         <div class="field">
           <%= label_tag "vote_option_id_#{option.id}", class: "radio" do %>
             <%= radio_button("vote", "option_id", option.id, class: "visually-hidden", ng_model: "option") %><!--
