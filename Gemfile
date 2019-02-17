@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'pg',        group: :development
+gem 'pg', '~> 0.17.0',        group: :development
 
 # gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'mysql2' , '~> 0.3.13',        group: :production
@@ -43,7 +43,7 @@ gem 'mysql2' , '~> 0.3.13',        group: :production
 # gem 'debugger', group: [:development, :test]
 
 # gem "autoprefixer-rails"
-gem 'autoprefixer-rails', '~> 4.0'
+gem 'autoprefixer-rails', '~> 2.2', '>= 2.2.0.20140727'
 gem 'rails-assets-angular', "1.3.0.rc.4"
 gem 'pusher'
 
