@@ -25,7 +25,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'pg'
+# gem 'pg'
+
+# gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+gem 'mysql2' , '~> 0.3.13'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -53,3 +56,14 @@ group :development do
 end
 
 gem 'dotenv-rails', :groups => [:development, :test]
+
+gem 'puma', '~> 2.9'
+gem 'net-ssh', '~> 2.8'
+gem 'capistrano', '~> 3.2.1'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-file-permissions', '~> 0.1.0'
+gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.2'
+gem 'capistrano-rake', '~> 0.1.0'
+gem 'capistrano-bundler', '~> 1.1', '>= 1.1.2'
+gem 'capistrano3-puma', '~> 0.4.2'
+gem 'puma_worker_killer', '~> 0.0.3'
