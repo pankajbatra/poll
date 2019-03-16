@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  ActiveAdmin.routes(self)
   resources :questions
   get '/admin' => 'admin#dashboard'
   put '/votes' => 'votes#update'

@@ -81,3 +81,6 @@ gem 'capistrano-rake'
 # gem 'capistrano3-monit', '~> 0.4.0'
 gem 'capistrano-bundler', '~> 1.2.0'
 gem 'sshkit-sudo'
+
+gem 'has_scope', '~> 0.6.0'
+gem 'activeadmin', '~> 1.0.0.pre1'
