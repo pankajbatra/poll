@@ -64,7 +64,7 @@ set :puma_init_active_record, true
 # set :puma_role, :web
 # set :puma_worker_timeout, nil
 
-# set :nginx_use_ssl, true
+set :nginx_use_ssl, true
 
 namespace :deploy do
 

@@ -11,7 +11,7 @@ set :puma_threads, [1, 32]
 set :puma_server_memory, 768
 
 set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
-set :nginx_server_name, 'onlineevm.sparselabs.com'
+set :nginx_server_name, 'onlineevm.com'
 
 
 set :ssh_options, {

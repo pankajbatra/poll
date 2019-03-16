@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
 
+  before_filter :authenticate, only: [:new, :create]
+
   before_filter :set_question, only: [:show, :results]
   before_filter :check_secret_is_unique, only: [:create]
 
@@ -53,6 +55,14 @@ class QuestionsController < ApplicationController
       if Question.where({secret: params[:question][:secret]}).exists?
         @question = Question.new(question_params)
         redirect_to :back, notice: 'Sorry that URL is taken'
+      end
+    end
+  end
+
+  def authenticate
+    if Rails.env.production?
+      authenticate_or_request_with_http_basic do |username, password|
+        username == ENV['ADMIN_USERNAME'] && password == ENV['ADMIN_PASSWORD']
       end
     end
   end
