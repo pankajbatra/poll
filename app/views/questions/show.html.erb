@@ -2,6 +2,7 @@
     <meta property="og:title" content="<%= @question.title %>" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Provide your response" />
+    <%= tag :meta, property: 'og:image', content: image_url(MagickTitle.say(@question.title).url) %>
 <% end %>
 
 <div ng-controller="QuestionController" ng-init="setOption('<%= @vote.option_id %>')">

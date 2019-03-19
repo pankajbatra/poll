@@ -81,3 +81,7 @@ gem 'capistrano-rake'
 # gem 'capistrano3-monit', '~> 0.4.0'
 gem 'capistrano-bundler', '~> 1.2.0'
 gem 'sshkit-sudo'
+
+gem 'magick_title', '~> 0.2.0'
+
+gem 'rb-readline', '~> 0.5.3', group: :development
