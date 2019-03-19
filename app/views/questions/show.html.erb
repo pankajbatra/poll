@@ -1,3 +1,9 @@
+<%= content_for(:meta_og) do %>
+    <meta property="og:title" content="<%= @question.title %>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Provide your response" />
+<% end %>
+
 <div ng-controller="QuestionController" ng-init="setOption('<%= @vote.option_id %>')">
 
   <h1><%= @question.title %></h1>
