@@ -21,7 +21,7 @@ set :log_level, :debug
 
 set :linked_files, %w{.env}
 
-set :linked_dirs, %w{certs data extra schema log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{certs data extra schema log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system fonts}
 
 
 # Default value for default_env is {}
