@@ -3,7 +3,6 @@ SSHKit.config.command_map[:rake] = 'bundle exec rake'
 set :application, 'onlineEVM'
 set :repo_url, 'https://github.com/sparselabs/poll.git'
 # set :repo_url, 'git@github.com:sparselabs/poll.git'
-# set :repo_url, 'https://sparse_deployer:deploy123_hello@bitbucket.org/pankajbatra/jooleh_rails.git'
 
 # set :ssh_options, { :forward_agent => true }
 
